@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 align="center">Year Two</h1>
+
+<div class="box-years" id="box-years">
+  <div class="year" onclick="showPart('one')"> <div class="done" style="background-color: rgb(237, 252, 173);"><p>done</p></div>part one</div>
+  <div class="year shakeable" >part two</div>
+   <a href="../index.html" style="text-decoration: none;"><button  class="bott" style="font-size: 20px;font-family: cursive;">Back-Main</button></a>
+</div>
+
+
+
+<div id="content-one" style="display: none;">
+ <table>
+    <tr>
+        <th>اسم المادة</th>
+        <th>الدرجة عملي</th>
+        <th>الدرجة نظري</th>
+        <th>التقييم</th>
+    </tr>
+    <tr>
+        <td>شبكات</td>
+        <td>40</td>
+        <td>60</td>
+        <td>ممتاز</td>
+    </tr>
+    <tr>
+        <td>تصميم منطقي رقمي </td>
+        <td>40</td>
+        <td>60</td>
+        <td>ممتاز</td>
+    </tr>
+    <tr>
+        <td>رياضيات</td>
+        <td colspan="2">99</td>
+        <td>ممتاز</td>
+    </tr>
+    <tr>
+        <td>تطوير وتصميم الويب</td>
+        <td>40</td>
+        <td>60</td>
+        <td>ممتاز</td>
+    </tr>
+    <tr>
+        <td>برمجة كائنية</td>
+        <td>40</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td  style="border-radius:0 0 30px;">قواعد البيانات</td>
+        <td>40</td>
+        <td>-</td>
+        <td   style="border-radius:0 0 0 30px;">-</td>
+    </tr>
+
+ </table>
+<br><br>
+
+<div class="total-avg">
+  <div class="total">
+    <p>- : المعدل الكلي</p>
+  </div>
+</div>
+  <button onclick="goBack()" class="bott">Back</button>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function showPart(part) {
+
+
+    if (part === 'one') {
+        document.getElementById("box-years").style.display = "none";
+      document.getElementById("content-one").style.display = "block";
+    } 
+  }
+
+  function goBack() {
+
+    document.getElementById("content-one").style.display = "none";
+
+
+
+    document.getElementById("box-years").style.display = "block";
+  }
+
+  const shakeBoxes = document.querySelectorAll('.shakeable');
+
+  shakeBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+      box.classList.add('shake');
+      setTimeout(() => {
+        box.classList.remove('shake');
+      }, 3000);
+    });
+  });
+
+</script>
+
+    </div>
+</body>
+</html>
