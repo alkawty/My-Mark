@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 align="center">Shamsan Alkwaty</h1>
+
+    <div class="box-years">
+        
+        <div class="year" onclick="window.location.href='years/Year-one.html';">
+            <div class="done">
+                <p>done</p>
+            </div>
+            Year one
+            <img src="img/arrow-right-svgrepo-com.svg" alt="icon" width="30px" class="icon">
+        </div>
+        <div class="year" onclick="window.location.href='years/Year-tow.html';">
+            Year tow
+            <img src="img/arrow-right-svgrepo-com.svg" alt="icon" width="30px" class="icon">
+        </div>
+        <div class="year shakeable" >Year three    <img src="img/arrow-right-svgrepo-com.svg" alt="icon" width="30px" class="icon"></div>
+        <div class="year shakeable" >Year four    <img src="img/arrow-right-svgrepo-com.svg" alt="icon" width="30px" class="icon"></div>
+    </div>
+
+
+<script>
+ 
+  const shakeBoxes = document.querySelectorAll('.shakeable');
+
+  shakeBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+      box.classList.add('shake');
+      setTimeout(() => {
+        box.classList.remove('shake');
+      }, 3000);
+    });
+  });
+</script>
+
+</body>
+</html>

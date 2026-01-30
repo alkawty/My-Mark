@@ -1,0 +1,163 @@
+body{
+    background-color: #e8e8e8;
+    color:#000;
+     --color: #00ab78;
+     background-color: #F3F3F3;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+  font-family:'font2';
+}
+h1{
+    color : salmon;
+    font-family:'font2';
+    font-size: 50px;
+}
+header{
+    height: 40px;
+}
+.box-years{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.year , .bott , .total-avg{
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    transform: scale(1.0);
+    transition: transform 0.2s;
+    /* contcat style */
+    color: #000;
+    position: relative;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: #e0e0e0;
+  box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+overflow: hidden;
+}
+.done{
+    position: absolute;
+    width: 1.2em;
+    height: 0.6em;
+    background-color: rgb(76, 255, 118);
+    border-radius: 20px;
+    left: 10px;
+    box-shadow: inset 0px 0px 3px 3px #bebebe, 0px -1px 7px #ffffff;
+    top: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    position: absolute;
+    right: 60px;
+    transition: right 1s;
+}
+.year:hover .icon{
+    right: 30px;
+    transition: right 1s;
+}
+.done p{
+    font-size: 10px;
+    top: -10px;
+    
+}
+.year:hover{
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+table{
+    font-family:'font1';
+    direction: rtl;
+    width: 90%;
+    height: 70vh;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+    border-radius: 30px ;
+    transform: scale(1.0);
+    transition: transform 0.3s;
+}
+@font-face {
+    font-family:'font1';
+    src: url(font/Bold.woff2);
+}
+@font-face {
+    font-family:'font2';
+    src: url(font/COMIC.TTF);
+}
+p{
+     font-family: 'font1';
+}
+
+
+table:hover{
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+td{
+    text-align: center;
+    border-bottom: 1px solid #000;
+    font-size: 17px;
+}
+
+th{
+    font-size: 20px;
+}
+
+tr:nth-child(even){
+    background-color: #fbadad;
+}
+.total-avg{
+font-size: 25px;
+ box-shadow: none;
+ background-color: #E1E1E1;
+}
+.total{
+    width: 100%;
+    height: 100%;
+    background-color: #E1E1E1;
+    border-radius: 30px;
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+         --color: #e1e1e13d;
+     background-color: #d2d2d2e8;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+.bott{
+     background: #e0e0e0;
+     box-shadow: 15px 15px 30px #bebebe,
+             -15px -15px 30px #ffffff;
+     border: none;
+     width: 30%; height: auto;
+     font-size: 26px;
+     padding: 20px;
+     font-family:'font2';
+}
+
+.shake {
+  animation: shake 1s ease;
+}
+
+
+@keyframes shake {
+  0%, 100% {
+    background-color: rgba(255, 0, 0, 0.636); transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
